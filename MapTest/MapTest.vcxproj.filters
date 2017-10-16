@@ -8,6 +8,9 @@
     <Filter Include="DirectXResourse">
       <UniqueIdentifier>{8455f0bd-d7bc-4a50-84bf-203492e23b39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{e5bc5a95-05a5-475f-87ce-f305b70d2762}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -16,6 +19,9 @@
     <ClInclude Include="DirectXResourse\DirectXResourse.h">
       <Filter>DirectXResourse</Filter>
     </ClInclude>
+    <ClInclude Include="Camera\Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -23,6 +29,9 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="DirectXResourse\DirectXResourse.cpp">
       <Filter>DirectXResourse</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\Camera.cpp">
+      <Filter>Camera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

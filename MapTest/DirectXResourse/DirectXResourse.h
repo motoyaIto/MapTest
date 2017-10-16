@@ -7,7 +7,6 @@
 
 #include <d3d11_1.h>
 
-//#include <memory>
 #include <wrl/client.h>
 
 #include <CommonStates.h>
@@ -22,6 +21,7 @@ private://QÆ‚Å‚«‚éƒNƒ‰ƒX
 	friend class Obj3D;
 	friend class Text;
 	friend class Line;
+
 private:
 	DirectXResourse();
 

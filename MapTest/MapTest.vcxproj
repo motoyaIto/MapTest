@@ -158,12 +158,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Camera\Camera.h" />
     <ClInclude Include="DirectXResourse\DirectXResourse.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="StepTimer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camera\Camera.cpp" />
     <ClCompile Include="DirectXResourse\DirectXResourse.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
