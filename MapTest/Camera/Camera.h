@@ -13,6 +13,7 @@ class Camera
 {
 protected:
 	using Matrix = DirectX::SimpleMath::Matrix;
+	using Vector2 = DirectX::SimpleMath::Vector2;
 	using Vector3 = DirectX::SimpleMath::Vector3;
 
 protected:
@@ -28,7 +29,7 @@ protected:
 	Vector3 m_upvec;	//ã•ûŒüƒxƒNƒgƒ‹(‚Ç‚¿‚ç‚ªã‚©)
 
 public:
-	Camera(int Width, int Height);
+	Camera(int width, int height);
 	virtual ~Camera();
 
 	virtual void Update();

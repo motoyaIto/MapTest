@@ -8,10 +8,10 @@
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
 
-Camera::Camera(int Width, int Height)
+Camera::Camera(int width, int height)
 	: m_proj(Matrix::Identity)
 	, m_fovY(XMConvertToRadians(60.0f))
-	, m_aspect((float)Width / Height)
+	, m_aspect((float)width / height)
 	, m_nearclip(0.1f)
 	, m_farclip(1000.0f)
 

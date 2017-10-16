@@ -11,6 +11,9 @@
     <Filter Include="Camera">
       <UniqueIdentifier>{e5bc5a95-05a5-475f-87ce-f305b70d2762}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Camera\DebugCamera">
+      <UniqueIdentifier>{8500c399-463e-44eb-aa06-1611950a0f40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -22,6 +25,9 @@
     <ClInclude Include="Camera\Camera.h">
       <Filter>Camera</Filter>
     </ClInclude>
+    <ClInclude Include="Camera\DebugCamera\DebugCamera.h">
+      <Filter>Camera\DebugCamera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -32,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="Camera\Camera.cpp">
       <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\DebugCamera\DebugCamera.cpp">
+      <Filter>Camera\DebugCamera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
