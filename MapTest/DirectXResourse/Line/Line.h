@@ -6,9 +6,11 @@
 
 #include "..//DirectXResourse.h"
 
-
+#include <CommonStates.h>
+#include <Effects.h>
 #include <SimpleMath.h>
-
+#include <PrimitiveBatch.h>
+#include <VertexTypes.h>
 
 
 class Line : public DirectXResourse
@@ -24,12 +26,12 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11InputLayout> m_inputLayout;//入力レアウト
 
 private:
-	Matrix m_cameraWorld;
-	Matrix m_cameraView;
-	Matrix m_cameraProj;
+	Matrix m_cameraWorld;	//カメラのワールド行列
+	Matrix m_cameraView;	//カメラのビュー行列
+	Matrix m_cameraProj;	//プロジェクション行列(射影行列)
 
-	Vector3 m_startPos;
-	Vector3 m_endPos;
+	Vector3 m_startPos;	//ラインの出発点
+	Vector3 m_endPos;	//ラインの到達点
 
 public:
 	Line();

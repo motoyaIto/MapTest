@@ -9,11 +9,6 @@
 
 #include <wrl/client.h>
 
-#include <CommonStates.h>
-#include <Effects.h>
-#include <PrimitiveBatch.h>
-#include <VertexTypes.h>
-
 
 class DirectXResourse
 {

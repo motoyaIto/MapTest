@@ -14,6 +14,9 @@
     <Filter Include="Camera\DebugCamera">
       <UniqueIdentifier>{8500c399-463e-44eb-aa06-1611950a0f40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DirectXResourse\Line">
+      <UniqueIdentifier>{1243ee27-3749-4cba-85d3-e66a497ed281}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -28,6 +31,9 @@
     <ClInclude Include="Camera\DebugCamera\DebugCamera.h">
       <Filter>Camera\DebugCamera</Filter>
     </ClInclude>
+    <ClInclude Include="DirectXResourse\Line\Line.h">
+      <Filter>DirectXResourse\Line</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -41,6 +47,9 @@
     </ClCompile>
     <ClCompile Include="Camera\DebugCamera\DebugCamera.cpp">
       <Filter>Camera\DebugCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXResourse\Line\Line.cpp">
+      <Filter>DirectXResourse\Line</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

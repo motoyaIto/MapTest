@@ -2,7 +2,7 @@
 //DirectXのデバイス
 //ito motya
 //2017.08.07
-
+//参考資料:学校配布のプロジェクト
 #include "DirectXResourse.h"
 
 //静的変数の実体
