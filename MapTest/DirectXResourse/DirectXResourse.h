@@ -2,7 +2,7 @@
 //DirectXのデバイス
 //ito motya
 //2017.08.07
-
+//参考資料:学校配布のプロジェクト
 #pragma once
 
 #include <d3d11_1.h>

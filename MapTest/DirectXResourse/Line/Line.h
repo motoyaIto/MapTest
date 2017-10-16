@@ -1,7 +1,8 @@
 //
 //ü
 //ItoMotoya
-//2017/09/20
+//2017/10/16
+//Ql‘—¿:https://github.com/Microsoft/DirectXTK/wiki/Simple-rendering
 #pragma once
 
 #include "..//DirectXResourse.h"

@@ -3,11 +3,17 @@
 //
 //Motoya Ito
 //2017/10/16
+//参考資料:学校配布のプロジェクト
 #include "Camera.h"
 
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
 
+/// <summary>
+/// コンストラクタ
+/// </summary>
+/// <param name="width">画面の横のサイズ</param>
+/// <param name="height">画面の縦のサイズ</param>
 Camera::Camera(int width, int height)
 	: m_proj(Matrix::Identity)
 	, m_fovY(XMConvertToRadians(60.0f))
@@ -22,10 +28,16 @@ Camera::Camera(int width, int height)
 {
 }
 
+/// <summary>
+/// デストラクタ
+/// </summary>
 Camera::~Camera()
 {
 }
 
+/// <summary>
+/// 更新
+/// </summary>
 void Camera::Update()
 {
 	//ビュー行列を作成

@@ -17,6 +17,9 @@
     <Filter Include="DirectXResourse\Line">
       <UniqueIdentifier>{1243ee27-3749-4cba-85d3-e66a497ed281}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DirectXResourse\Line\Grid">
+      <UniqueIdentifier>{7b967da1-e690-460d-a342-50d0b3a70ad4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -34,6 +37,9 @@
     <ClInclude Include="DirectXResourse\Line\Line.h">
       <Filter>DirectXResourse\Line</Filter>
     </ClInclude>
+    <ClInclude Include="DirectXResourse\Line\Grid\Grid.h">
+      <Filter>DirectXResourse\Line\Grid</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -50,6 +56,9 @@
     </ClCompile>
     <ClCompile Include="DirectXResourse\Line\Line.cpp">
       <Filter>DirectXResourse\Line</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXResourse\Line\Grid\Grid.cpp">
+      <Filter>DirectXResourse\Line\Grid</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

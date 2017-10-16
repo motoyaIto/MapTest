@@ -161,6 +161,7 @@
     <ClInclude Include="Camera\Camera.h" />
     <ClInclude Include="Camera\DebugCamera\DebugCamera.h" />
     <ClInclude Include="DirectXResourse\DirectXResourse.h" />
+    <ClInclude Include="DirectXResourse\Line\Grid\Grid.h" />
     <ClInclude Include="DirectXResourse\Line\Line.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="pch.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="Camera\Camera.cpp" />
     <ClCompile Include="Camera\DebugCamera\DebugCamera.cpp" />
     <ClCompile Include="DirectXResourse\DirectXResourse.cpp" />
+    <ClCompile Include="DirectXResourse\Line\Grid\Grid.cpp" />
     <ClCompile Include="DirectXResourse\Line\Line.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />

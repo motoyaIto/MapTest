@@ -1,22 +1,32 @@
 //
 //線
 //ItoMotoya
-//2017/09/20
+//2017/10/16
+//参考資料:https://github.com/Microsoft/DirectXTK/wiki/Simple-rendering
 #include "Line.h"
 
-#include "..//..//pch.h"
+#include <DirectXColors.h>
 
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
 
+/// <summary>
+/// コンストラクタ
+/// </summary>
 Line::Line()
 {
 }
 
+/// <summary>
+/// デストラクタ
+/// </summary>
 Line::~Line()
 {
 }
 
+/// <summary>
+/// 初期化
+/// </summary>
 void Line::Initialize()
 {
 	//デバイス依存の初期化=======================================================================
@@ -33,10 +43,10 @@ void Line::Initialize()
 	m_effect->GetVertexShaderBytecode(&shaderByteCode, &byteCodeLength);
 
 	//入力レイアウトに関連付ける
-	DX::ThrowIfFailed(m_d3dDevice->CreateInputLayout(VertexPositionColor::InputElements
+	m_d3dDevice->CreateInputLayout(VertexPositionColor::InputElements
 		, VertexPositionColor::InputElementCount
 		, shaderByteCode, byteCodeLength
-		, m_inputLayout.ReleaseAndGetAddressOf()));
+		, m_inputLayout.ReleaseAndGetAddressOf());
 
 	//頂点のポジションと色を初期化=========================================================
 	m_batch = std::make_unique<PrimitiveBatch<VertexPositionColor>>(m_d3dContext.Get());
@@ -46,11 +56,17 @@ void Line::Initialize()
 	m_cameraWorld = DirectX::SimpleMath::Matrix::Identity;
 }
 
+/// <summary>
+/// 更新
+/// </summary>
 void Line::Update()
 {
 	m_cameraWorld = m_cameraView * m_cameraProj ;
 }
 
+/// <summary>
+/// 描画
+/// </summary>
 void Line::Render()
 {
 	//第一引数でブレンド方法を確定(ノーマルブレンド)
