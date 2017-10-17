@@ -36,6 +36,10 @@ void Game::Initialize(HWND window, int width, int height)
     m_timer.SetFixedTimeStep(true);
     m_timer.SetTargetElapsedSeconds(1.0 / 60);
     */
+
+	DirectXResourse::InitializeStatic(m_d3dDevice, m_d3dContext);
+
+
 }
 
 // Executes the basic game loop.

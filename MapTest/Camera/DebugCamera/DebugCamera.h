@@ -27,4 +27,6 @@ public:
 	DebugCamera(int width, int height);
 	~DebugCamera();
 
+	void Update() override;
+
 };

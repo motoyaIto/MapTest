@@ -164,6 +164,7 @@
     <ClInclude Include="DirectXResourse\Line\Grid\Grid.h" />
     <ClInclude Include="DirectXResourse\Line\Line.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Mouse\MouseUtil.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="StepTimer.h" />
   </ItemGroup>
@@ -175,6 +176,7 @@
     <ClCompile Include="DirectXResourse\Line\Line.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Mouse\MouseUtil.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

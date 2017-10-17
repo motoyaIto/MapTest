@@ -6,6 +6,8 @@
 //参考資料:学校配布のプロジェクト
 #include "DebugCamera.h"
 
+#include <Mouse.h>
+
 DebugCamera::DebugCamera(int width, int height)
 	: Camera(width, height)
 	, m_nowAngle(Vector2::Zero)
@@ -20,4 +22,13 @@ DebugCamera::DebugCamera(int width, int height)
 
 DebugCamera::~DebugCamera()
 {
+}
+
+/// <summary>
+/// 更新
+/// </summary>
+void DebugCamera::Update()
+{
+	// マウス情報を取得
+	
 }
