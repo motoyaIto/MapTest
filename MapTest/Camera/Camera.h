@@ -34,4 +34,10 @@ public:
 
 	virtual void Update();
 
+public://getter
+
+public://setter
+	void SetEyepos(Vector3 eyepos) { m_eyepos = eyepos; }
+	void SetRefpos(Vector3 refpos) { m_refpos = refpos; }
+	void SetUpvec(Vector3 upvec) { m_upvec = upvec; }
 };

@@ -17,7 +17,7 @@ private:
 	using Mouse = DirectX::Mouse;
 	using Mode = DirectX::Mouse::Mode;
 
-private://構造体
+public://構造体
 		//ボタン
 	enum Button
 	{

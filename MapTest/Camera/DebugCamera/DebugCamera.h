@@ -11,7 +11,8 @@ class DebugCamera : public Camera
 {
 private://静的変数
 	//デフォルトのカメラの距離
-	static const float DFAULT_CAMERA_DISTANCE;
+	static const float DEFAULT_CAMERA_DISTANCE;
+
 
 private:
 	Vector2 m_nowAngle;		//今の回転角
@@ -23,9 +24,12 @@ private:
 
 	int m_scrollWheelValue;	// スクロールフォイール値
 
+private://内部関数
+	void Motion(int x, int y);//移動先の行列を計算
+
 public:
 	DebugCamera(int width, int height);
-	~DebugCamera();
+	~DebugCamera() override;
 
 	void Update() override;
 
