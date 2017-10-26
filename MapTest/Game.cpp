@@ -5,6 +5,8 @@
 #include "pch.h"
 #include "Game.h"
 
+#include <VertexTypes.h>
+
 extern void ExitGame();
 
 using namespace DirectX;
@@ -38,7 +40,25 @@ void Game::Initialize(HWND window, int width, int height)
     */
 
 	DirectXResourse::InitializeStatic(m_d3dDevice, m_d3dContext);
+	//Obj3D::InitializeStatic(m_DCamera);
 
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	m_DCamera = new DebugCamera(width, height);
+
+	m_effect = new DirectX::BasicEffect(DirectXResourse::m_d3dDevice.Get());
+	m_effect->SetView(m_DCamera->GetView());
+	m_effect->SetProjection(m_DCamera->GetProj());
+
+	void const* shaderByCode;
+	size_t byteCodeLength;
+
+	m_effect->GetVertexShaderBytecode(&shaderByCode, &byteCodeLength);
+	DirectXResourse::m_d3dDevice->CreateInputLayout(DirectX::VertexPositionColor::InputElements, DirectX::VertexPositionColor::InputElementCount, shaderByCode, byteCodeLength, m_inputLayout.GetAddressOf());
+
+	m_grid = new Grid();
+	m_grid->Initialize();
+	
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 }
 
@@ -59,6 +79,10 @@ void Game::Update(DX::StepTimer const& timer)
     float elapsedTime = float(timer.GetElapsedSeconds());
 
     // TODO: Add your game logic here.
+
+	m_DCamera->Update();
+	m_grid->Update();
+
     elapsedTime;
 }
 
@@ -74,6 +98,15 @@ void Game::Render()
     Clear();
 
     // TODO: Add your rendering code here.
+	//ƒJƒƒ‰
+	m_effect->SetView(m_DCamera->GetView());
+	m_effect->SetProjection(m_DCamera->GetProj());
+	m_effect->SetWorld(m_DCamera->GetWorld());
+
+	m_effect->Apply(DirectXResourse::m_d3dContext.Get());
+	DirectXResourse::m_d3dContext->IASetInputLayout(m_inputLayout.Get());
+
+	m_grid->Render();
 
     Present();
 }

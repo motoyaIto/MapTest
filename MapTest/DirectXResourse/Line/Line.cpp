@@ -15,6 +15,7 @@ using namespace DirectX::SimpleMath;
 /// </summary>
 Line::Line()
 {
+	this->Initialize();
 }
 
 /// <summary>

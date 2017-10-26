@@ -17,6 +17,8 @@ protected:
 	using Vector3 = DirectX::SimpleMath::Vector3;
 
 protected:
+	Matrix m_world;		//ワールド座標行列
+
 	Matrix m_proj;		//プロジェクション行列(射影行列)
 	float m_fovY;		//縦の写す範囲(垂直方向視野角)
 	float m_aspect;		//縦横の比率(アスペクト比)
@@ -35,6 +37,9 @@ public:
 	virtual void Update();
 
 public://getter
+	const Matrix& GetView() { return m_view; }
+	const Matrix& GetProj() { return m_proj; }
+	const Matrix& GetWorld() { return m_world; }
 
 public://setter
 	void SetEyepos(Vector3 eyepos) { m_eyepos = eyepos; }

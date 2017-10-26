@@ -16,11 +16,11 @@
 
 class Line : public DirectXResourse
 {
-private:
+protected:
 	using Matrix = DirectX::SimpleMath::Matrix;
 	using Vector3 = DirectX::SimpleMath::Vector3;
 
-private:
+protected:
 	DirectX::CommonStates* m_states;//ステータス
 	DirectX::BasicEffect* m_effect;//エフェクト
 	std::unique_ptr<DirectX::PrimitiveBatch<DirectX::VertexPositionColor>> m_batch;//頂点、ポジション、色で高速描画
@@ -39,8 +39,8 @@ public:
 	~Line();
 
 	void Initialize();
-	void Update();
-	void Render();
+	virtual void Update();
+	virtual void Render();
 
 public://getter
 

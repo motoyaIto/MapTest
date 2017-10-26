@@ -63,6 +63,9 @@ void MouseUtil::Update()
 	m_state = m_mouse->GetState();
 	// トリガー状態の更新
 	m_buttonStateTracker.Update(m_state);
+	if (m_buttonStateTracker.leftButton) {
+		int a = 0;
+	}
 }
 
 /// <summary>

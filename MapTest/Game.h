@@ -8,6 +8,14 @@
 
 #include "DirectXResourse//DirectXResourse.h"
 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#include <Effects.h>
+#include <memory>
+
+#include "Camera//Camera.h"
+#include "Camera//DebugCamera//DebugCamera.h"
+#include "DirectXResourse//Line//Grid//Grid.h"
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // A basic game implementation that creates a D3D11 device and
 // provides a game loop.
@@ -65,5 +73,13 @@ private:
     // Rendering loop timer.
     DX::StepTimer                                   m_timer;
 
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	Microsoft::WRL::ComPtr<ID3D11InputLayout> m_inputLayout;
+	DirectX::BasicEffect* m_effect;
+
+	//Camera* m_camera;
+	DebugCamera* m_DCamera;
+	Grid* m_grid;
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	
 };

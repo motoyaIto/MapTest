@@ -45,6 +45,7 @@ void DebugCamera::Update()
 {
 	// マウス情報を取得
 	MouseUtil* mouse = MouseUtil::GetInstance();
+	mouse->Update();
 
 	//マウスの左ボタンが押された
 	if (mouse->IsTriggered(MouseUtil::Button::Left))
