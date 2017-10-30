@@ -31,7 +31,7 @@ void Grid::Update()
 void Grid::Render()
 {
 	//‰¡
-	for (int i = 0; i < m_wonRowNam; i++)
+	for (int i = 0; i < m_wonRowNam + 1; i++)
 	{
 		Vector3 lineStart = Vector3(-m_wonRowNam / 2, 0, i - (m_wonRowNam / 2));
 		Vector3 lineEnd = Vector3(m_wonRowNam / 2, 0, i - (m_wonRowNam / 2));
@@ -43,7 +43,7 @@ void Grid::Render()
 	}
 
 	//c
-	for (int i = 0; i < m_wonRowNam; i++)
+	for (int i = 0; i < m_wonRowNam + 1; i++)
 	{
 		Vector3 lineStart = Vector3(i - (m_wonRowNam / 2) , 0, -m_wonRowNam / 2);
 		Vector3 lineEnd = Vector3(i - (m_wonRowNam / 2), 0, m_wonRowNam / 2);

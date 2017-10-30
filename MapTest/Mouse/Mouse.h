@@ -52,11 +52,12 @@ public:
 	bool ThickButtonTrigger(Button button);//指定ボタンのトリガーチェック
 	bool ReleasedButton(Button button);//指定のボタンが放れたか
 
+	void ResetWheelValue();//ホイールの値をリセット
 public://getter
-	
-
 	const int GetPos_X() { return m_state.x; }
 	const int GetPos_Y() { return m_state.y; }
+
+	const int GetWheelValue() { return m_state.scrollWheelValue; }
 
 public://setter
 	void SetMouseInWindow(const HWND window) { m_mouse->SetWindow(window); }

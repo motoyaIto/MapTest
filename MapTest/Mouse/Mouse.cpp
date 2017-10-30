@@ -108,3 +108,11 @@ bool MouseCircumference::ReleasedButton(Button button)
 	return false;
 }
 
+/// <summary>
+/// ホイールの値をリセット
+/// </summary>
+void MouseCircumference::ResetWheelValue()
+{
+	m_mouse->ResetScrollWheelValue();
+}
+

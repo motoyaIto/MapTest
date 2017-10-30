@@ -89,13 +89,13 @@ void DebugCamera::Update()
 	}
 
 	//マウスのフォイール値を取得
-	//m_scrollWheelValue = mouse->GetWheelValue();
+	m_scrollWheelValue = mouse->GetWheelValue();
 
-	//if (m_scrollWheelValue > 0)
-	//{
-	//	m_scrollWheelValue = 0;
-	//	mouse->ResetWheelValue();
-	//}
+	if (m_scrollWheelValue > 0)
+	{
+		m_scrollWheelValue = 0;
+		mouse->ResetWheelValue();
+	}
 
 	//ビュー行列を算出する
 	Matrix rotX = Matrix::CreateRotationX(m_afterAngle.x);
