@@ -1,5 +1,5 @@
 //
-//DirectXのデバイス
+//DirectXのデバイス(singleton)
 //ito motya
 //2017.08.07
 //参考資料:学校配布のプロジェクト
@@ -17,7 +17,7 @@ private://参照できるクラス
 	friend class Text;
 	friend class Line;
 
-private:
+private://内部関数
 	DirectXResourse();
 
 	static DirectXResourse& GetInstacse();

@@ -21,7 +21,7 @@
       <UniqueIdentifier>{7b967da1-e690-460d-a342-50d0b3a70ad4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Mouse">
-      <UniqueIdentifier>{9a3f34f6-9b94-4057-904e-baef1a4474e6}</UniqueIdentifier>
+      <UniqueIdentifier>{de3699af-8cc6-4df6-9f97-351d62b1a0de}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -43,7 +43,7 @@
     <ClInclude Include="DirectXResourse\Line\Grid\Grid.h">
       <Filter>DirectXResourse\Line\Grid</Filter>
     </ClInclude>
-    <ClInclude Include="Mouse\MouseUtil.h">
+    <ClInclude Include="Mouse\Mouse.h">
       <Filter>Mouse</Filter>
     </ClInclude>
   </ItemGroup>
@@ -66,7 +66,7 @@
     <ClCompile Include="DirectXResourse\Line\Grid\Grid.cpp">
       <Filter>DirectXResourse\Line\Grid</Filter>
     </ClCompile>
-    <ClCompile Include="Mouse\MouseUtil.cpp">
+    <ClCompile Include="Mouse\Mouse.cpp">
       <Filter>Mouse</Filter>
     </ClCompile>
   </ItemGroup>

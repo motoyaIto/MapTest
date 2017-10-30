@@ -7,6 +7,7 @@
 #include "StepTimer.h"
 
 #include "DirectXResourse//DirectXResourse.h"
+#include "Mouse//Mouse.h"
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #include <Effects.h>

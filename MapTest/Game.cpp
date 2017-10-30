@@ -40,11 +40,14 @@ void Game::Initialize(HWND window, int width, int height)
     */
 
 	DirectXResourse::InitializeStatic(m_d3dDevice, m_d3dContext);
-	//Obj3D::InitializeStatic(m_DCamera);
+	MouseCircumference* mouse = MouseCircumference::GetInstans();
+	mouse->SetMouseInWindow(window);
+
+	
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	m_DCamera = new DebugCamera(width, height);
-
+	
 	m_effect = new DirectX::BasicEffect(DirectXResourse::m_d3dDevice.Get());
 	m_effect->SetView(m_DCamera->GetView());
 	m_effect->SetProjection(m_DCamera->GetProj());
@@ -57,6 +60,7 @@ void Game::Initialize(HWND window, int width, int height)
 
 	m_grid = new Grid();
 	m_grid->Initialize();
+	
 	
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -80,10 +84,16 @@ void Game::Update(DX::StepTimer const& timer)
 
     // TODO: Add your game logic here.
 
-	m_DCamera->Update();
+	
+	
+
+	MouseCircumference::GetInstans()->Update();
+
 	m_grid->Update();
 
-    elapsedTime;
+	m_DCamera->Update();
+
+	elapsedTime;
 }
 
 // Draws the scene.
