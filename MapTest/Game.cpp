@@ -83,11 +83,10 @@ void Game::Update(DX::StepTimer const& timer)
     float elapsedTime = float(timer.GetElapsedSeconds());
 
     // TODO: Add your game logic here.
-
-	
-	
-
 	MouseCircumference::GetInstans()->Update();
+
+	m_grid->SetProj(m_DCamera->GetProj());
+	m_grid->SetView(m_DCamera->GetView());
 
 	m_grid->Update();
 

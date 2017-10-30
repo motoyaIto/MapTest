@@ -27,11 +27,6 @@ private:
 
 	int m_scrollWheelValue;	// スクロールフォイール値
 
-	
-
-
-
-
 public:
 	DebugCamera(int width, int height);
 	~DebugCamera() override;

@@ -30,26 +30,26 @@ void Grid::Update()
 
 void Grid::Render()
 {
-	for (int i = 0; i <= m_wonRowNam; i++)
+	//横
+	for (int i = 0; i < m_wonRowNam; i++)
 	{
-		float fPercent = float(i) / float(m_wonRowNam);//全体からどの位置に線を引くか
+		Vector3 lineStart = Vector3(-m_wonRowNam / 2, 0, i - (m_wonRowNam / 2));
+		Vector3 lineEnd = Vector3(m_wonRowNam / 2, 0, i - (m_wonRowNam / 2));
 
-		Vector3 scale = m_axis_x * fPercent + m_origin;
-
-		m_line->SetStartPos(scale - m_axis_y);
-		m_line->SetEndPos(scale + m_axis_y);
+		m_line->SetStartPos(lineStart);
+		m_line->SetEndPos(lineEnd);
 
 		m_line->Render();
 	}
 
-	for (int i = 0; i <= m_wonRowNam; i++)
+	//縦
+	for (int i = 0; i < m_wonRowNam; i++)
 	{
-		float fPercent = float(i) / float(m_wonRowNam);//全体からどの位置に線を引くか
+		Vector3 lineStart = Vector3(i - (m_wonRowNam / 2) , 0, -m_wonRowNam / 2);
+		Vector3 lineEnd = Vector3(i - (m_wonRowNam / 2), 0, m_wonRowNam / 2);
 
-		Vector3 scale = m_axis_y * fPercent + m_origin;
-
-		m_line->SetStartPos(scale - m_axis_x);
-		m_line->SetEndPos(scale + m_axis_x);
+		m_line->SetStartPos(lineStart);
+		m_line->SetEndPos(lineEnd);
 
 		m_line->Render();
 	}

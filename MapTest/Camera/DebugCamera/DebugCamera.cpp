@@ -26,9 +26,9 @@ void DebugCamera::Motion(const int& x, const int& y)
 	if (dx != 0.0f || dy != 0.0f)
 	{
 		//X軸の回転
-		float xAngle = dx * DirectX::XM_PI;
+		float xAngle = dy * DirectX::XM_PI;
 		//Y軸の回転
-		float yAngle = dy * DirectX::XM_PI;
+		float yAngle = dx * DirectX::XM_PI;
 
 		//回転後の角度を格納
 		m_afterAngle.x = m_nowAngle.x + xAngle;
@@ -75,15 +75,11 @@ void DebugCamera::Update()
 		//マウスの座標を取得
 		m_drag.x = mouse->GetPos_X();
 		m_drag.y = mouse->GetPos_Y();
-
-		//mouse->SetClickLeftButtonFlag();
 	}
 	//マウスの左ボタンが放されたら
 	else if (mouse->ReleasedButton(MouseCircumference::Button::Left))
 	{
 		m_nowAngle = m_afterAngle;
-
-		//mouse->SetClickLeftButtonFlag();
 	}
 
 	//マウスのボタンが押されていたらカメラを移動させる
@@ -107,7 +103,7 @@ void DebugCamera::Update()
 
 	Matrix rt = rotX * rotY;
 
-	Vector3 eye(0.0f, 10.0f, 1.0f);
+	Vector3 eye(0.0f, 0.5f, 0.3f);
 	Vector3 target(0.0f, 0.0f, 0.0f);
 	Vector3 up(0.0f, 1.0f, 0.0f);
 

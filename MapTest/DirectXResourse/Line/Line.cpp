@@ -86,10 +86,6 @@ void Line::Render()
 
 	m_batch->Begin();
 
-	//ラインの長さ
-	DirectX::SimpleMath::Vector3 xaxis(2.f, 0.f, 0.f);
-	DirectX::SimpleMath::Vector3 yaxis(0.f, 0.f, 2.f);
-
 	VertexPositionColor v1(m_startPos, Colors::White);//開始地点
 	VertexPositionColor v2(m_endPos, Colors::White);//終了地点
 	m_batch->DrawLine(v1, v2);//描画

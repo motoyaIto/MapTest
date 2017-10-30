@@ -15,15 +15,16 @@ using namespace DirectX::SimpleMath;
 /// <param name="width">画面の横のサイズ</param>
 /// <param name="height">画面の縦のサイズ</param>
 Camera::Camera(int width, int height)
-	: m_proj(Matrix::Identity)
+	: m_world(Matrix::Identity)
+	, m_proj(Matrix::Identity)
 	, m_fovY(XMConvertToRadians(60.0f))
 	, m_aspect((float)width / height)
 	, m_nearclip(0.1f)
 	, m_farclip(1000.0f)
 
 	, m_view(Matrix::Identity)
-	, m_eyepos(Vector3(0.0f, 6.0f, 10.0f))
-	, m_refpos(Vector3(0.0f, 2.0f, 0.0f))
+	, m_eyepos(Vector3(0.0f, 0.0f, 0.0f))
+	, m_refpos(Vector3(0.0f, 0.0f, 0.0f))
 	, m_upvec(Vector3(0.0f, 1.0f, 0.0f))
 {
 }
