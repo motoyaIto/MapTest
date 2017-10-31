@@ -19,6 +19,9 @@ private:
 
 	Line* m_line;
 
+private://“à•”ŠÖ”
+	void CreateGrid();
+	
 public:
 	Grid();
 	~Grid();

@@ -10,6 +10,13 @@
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
 
+//ì‡ïîä÷êî=====================================================================
+void Grid::CreateGrid()
+{
+
+}
+
+//publicä÷êî===================================================================
 Grid::Grid()
 	: m_axis_x(1.0f, 0.0f, 0.0f), m_axis_y(0.0f, 0.0f, 1.0f)
 	, m_origin(Vector3::Zero)
