@@ -2,19 +2,13 @@
 //碁盤目を描くクラス
 //ItoMotoya
 //2017/10/16
-//参考資料:https://github.com/Microsoft/DirectXTK/wiki/Simple-rendering
+
 #include "Grid.h"
 
 #include <DirectXColors.h>
 
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
-
-//内部関数=====================================================================
-void Grid::CreateGrid()
-{
-
-}
 
 //public関数===================================================================
 Grid::Grid()
@@ -40,8 +34,8 @@ void Grid::Render()
 	//横
 	for (int i = 0; i < m_wonRowNam + 1; i++)
 	{
-		Vector3 lineStart = Vector3(-m_wonRowNam / 2, 0, i - (m_wonRowNam / 2));
-		Vector3 lineEnd = Vector3(m_wonRowNam / 2, 0, i - (m_wonRowNam / 2));
+		Vector3 lineStart = Vector3(-m_wonRowNam / 2, 0.1f, i - (m_wonRowNam / 2));
+		Vector3 lineEnd = Vector3(m_wonRowNam / 2, 0.1f, i - (m_wonRowNam / 2));
 
 		m_line->SetStartPos(lineStart);
 		m_line->SetEndPos(lineEnd);
@@ -52,8 +46,8 @@ void Grid::Render()
 	//縦
 	for (int i = 0; i < m_wonRowNam + 1; i++)
 	{
-		Vector3 lineStart = Vector3(i - (m_wonRowNam / 2) , 0, -m_wonRowNam / 2);
-		Vector3 lineEnd = Vector3(i - (m_wonRowNam / 2), 0, m_wonRowNam / 2);
+		Vector3 lineStart = Vector3(i - (m_wonRowNam / 2) , 0.1f, -m_wonRowNam / 2);
+		Vector3 lineEnd = Vector3(i - (m_wonRowNam / 2), 0.1f, m_wonRowNam / 2);
 
 		m_line->SetStartPos(lineStart);
 		m_line->SetEndPos(lineEnd);

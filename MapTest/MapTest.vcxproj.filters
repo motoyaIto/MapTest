@@ -23,6 +23,12 @@
     <Filter Include="Mouse">
       <UniqueIdentifier>{de3699af-8cc6-4df6-9f97-351d62b1a0de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DirectXResourse\Obj3D">
+      <UniqueIdentifier>{cf107bb2-9bb1-46e0-8309-3bbbb8f75b66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Glound">
+      <UniqueIdentifier>{40bd2a5a-683d-4e13-a8a9-bba3cba5b9b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -45,6 +51,12 @@
     </ClInclude>
     <ClInclude Include="Mouse\Mouse.h">
       <Filter>Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXResourse\Obj3D\Obj3D.h">
+      <Filter>DirectXResourse\Obj3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Glound\Glound.h">
+      <Filter>Glound</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +81,12 @@
     <ClCompile Include="Mouse\Mouse.cpp">
       <Filter>Mouse</Filter>
     </ClCompile>
+    <ClCompile Include="DirectXResourse\Obj3D\Obj3D.cpp">
+      <Filter>DirectXResourse\Obj3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Glound\Glound.cpp">
+      <Filter>Glound</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
@@ -82,5 +100,10 @@
     <Manifest Include="settings.manifest">
       <Filter>Assets</Filter>
     </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Assets\Ground.FBX">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
   </ItemGroup>
 </Project>

@@ -23,6 +23,8 @@ Line::Line()
 /// </summary>
 Line::~Line()
 {
+	delete m_states;//ステータス
+	delete m_effect;//エフェクト
 }
 
 /// <summary>
@@ -73,7 +75,7 @@ void Line::Render()
 	//第一引数でブレンド方法を確定(ノーマルブレンド)
 	m_d3dContext->OMSetBlendState(m_states->Opaque(), nullptr, 0xFFFFFFFF);
 	//深度ステンシル(深度バッファー、ステンシルバッファー)
-	m_d3dContext->OMSetDepthStencilState(m_states->DepthNone(), 0);
+	m_d3dContext->OMSetDepthStencilState(m_states->DepthRead(), 0);
 	//サーフェイス上にレンダリング
 	m_d3dContext->RSSetState(m_states->CullNone());
 

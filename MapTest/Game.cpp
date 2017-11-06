@@ -13,6 +13,8 @@ using namespace DirectX;
 
 using Microsoft::WRL::ComPtr;
 
+const int Game::GRIDNAM = 10;
+
 Game::Game() :
     m_window(0),
     m_outputWidth(800),
@@ -39,15 +41,20 @@ void Game::Initialize(HWND window, int width, int height)
     m_timer.SetTargetElapsedSeconds(1.0 / 60);
     */
 
+	
 	DirectXResourse::InitializeStatic(m_d3dDevice, m_d3dContext);
 	MouseCircumference* mouse = MouseCircumference::GetInstans();
 	mouse->SetMouseInWindow(window);
-
+	
 	
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	m_DCamera = new DebugCamera(width, height);
 	
+	Obj3D::InitializeStatic(m_DCamera);
+	/*m_obj = new Obj3D();
+	m_obj->LoadModel(L"Resources/Ground.cmo");*/
+
 	m_effect = new DirectX::BasicEffect(DirectXResourse::m_d3dDevice.Get());
 	m_effect->SetView(m_DCamera->GetView());
 	m_effect->SetProjection(m_DCamera->GetProj());
@@ -60,8 +67,10 @@ void Game::Initialize(HWND window, int width, int height)
 
 	m_grid = new Grid();
 	m_grid->Initialize();
-	
-	
+	m_grid->SetWonRowNam(GRIDNAM);
+
+	m_glound.SetWonRowNam(GRIDNAM);
+	m_glound.Initialize();
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 }
@@ -115,7 +124,12 @@ void Game::Render()
 	m_effect->Apply(DirectXResourse::m_d3dContext.Get());
 	DirectXResourse::m_d3dContext->IASetInputLayout(m_inputLayout.Get());
 
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	//m_obj->Render();
+
+	m_glound.Render();
 	m_grid->Render();
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     Present();
 }

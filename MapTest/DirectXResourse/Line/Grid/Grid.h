@@ -2,7 +2,7 @@
 //碁盤目を描くクラス
 //ItoMotoya
 //2017/10/16
-//参考資料:https://github.com/Microsoft/DirectXTK/wiki/Simple-rendering
+
 #pragma once
 #include "..//Line.h"
 
@@ -19,9 +19,6 @@ private:
 
 	Line* m_line;
 
-private://内部関数
-	void CreateGrid();
-	
 public:
 	Grid();
 	~Grid();
@@ -35,4 +32,6 @@ public://getter
 public://setter
 	void SetProj(Matrix proj){ m_line->SetProj(proj); }
 	void SetView(Matrix view){ m_line->SetView(view); }
+
+	void SetWonRowNam(int nam) { m_wonRowNam = nam; }
 };

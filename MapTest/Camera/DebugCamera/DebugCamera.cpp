@@ -101,7 +101,7 @@ void DebugCamera::Update()
 	Matrix rotX = Matrix::CreateRotationX(m_afterAngle.x);
 	Matrix rotY = Matrix::CreateRotationY(m_afterAngle.y);
 
-	Matrix rt = rotX * rotY;
+	Matrix rt = rotY * rotX;
 
 	Vector3 eye(0.0f, 0.5f, 0.3f);
 	Vector3 target(0.0f, 0.0f, 0.0f);
