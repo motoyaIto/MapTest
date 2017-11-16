@@ -19,6 +19,7 @@
 #include "DirectXResourse//Obj3D//Obj3D.h"
 
 #include "Glound//Glound.h"
+#include "MAP//MAP.h"
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // A basic game implementation that creates a D3D11 device and
@@ -26,7 +27,7 @@
 class Game
 {
 public:
-	static const int GRIDNAM;
+	
 
     Game();
 
@@ -86,6 +87,7 @@ private:
 	Grid* m_grid;
 	Obj3D* m_obj;
 	Glound m_glound;
+	MAP m_map;
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	
 };

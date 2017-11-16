@@ -14,14 +14,12 @@ Glound::Glound()
 
 Glound::~Glound()
 {
-
 	delete[] m_glound;
-	
 }
 
 void Glound::Initialize()
 {
-	m_glound = new Obj3D[m_wonRowNam * m_wonRowNam]();
+	m_glound = new Obj3D[m_wonRowNam * m_wonRowNam];
 
 	for (int i = 0; i < m_wonRowNam; i++)//c
 	{

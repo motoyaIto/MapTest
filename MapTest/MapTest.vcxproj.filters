@@ -29,6 +29,9 @@
     <Filter Include="Glound">
       <UniqueIdentifier>{40bd2a5a-683d-4e13-a8a9-bba3cba5b9b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MAP">
+      <UniqueIdentifier>{8943de72-0d83-4088-ba5e-9989cd81fbe6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -57,6 +60,9 @@
     </ClInclude>
     <ClInclude Include="Glound\Glound.h">
       <Filter>Glound</Filter>
+    </ClInclude>
+    <ClInclude Include="MAP\MAP.h">
+      <Filter>MAP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +93,9 @@
     <ClCompile Include="Glound\Glound.cpp">
       <Filter>Glound</Filter>
     </ClCompile>
+    <ClCompile Include="MAP\MAP.cpp">
+      <Filter>MAP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
@@ -103,6 +112,18 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\Ground.FBX">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\Mount1.FBX">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\Mount2.FBX">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\Pond.FBX">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\PoisonSwamp.FBX">
       <Filter>Assets</Filter>
     </MeshContentTask>
   </ItemGroup>

@@ -169,6 +169,7 @@
     <ClInclude Include="DirectXResourse\Obj3D\Obj3D.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Glound\Glound.h" />
+    <ClInclude Include="MAP\MAP.h" />
     <ClInclude Include="Mouse\Mouse.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="StepTimer.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Glound\Glound.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MAP\MAP.cpp" />
     <ClCompile Include="Mouse\Mouse.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -202,6 +204,10 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\Ground.FBX" />
+    <MeshContentTask Include="Assets\Mount1.FBX" />
+    <MeshContentTask Include="Assets\Mount2.FBX" />
+    <MeshContentTask Include="Assets\PoisonSwamp.FBX" />
+    <MeshContentTask Include="Assets\Pond.FBX" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

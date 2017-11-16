@@ -13,7 +13,6 @@ using namespace DirectX;
 
 using Microsoft::WRL::ComPtr;
 
-const int Game::GRIDNAM = 10;
 
 Game::Game() :
     m_window(0),
@@ -65,11 +64,12 @@ void Game::Initialize(HWND window, int width, int height)
 	m_effect->GetVertexShaderBytecode(&shaderByCode, &byteCodeLength);
 	DirectXResourse::m_d3dDevice->CreateInputLayout(DirectX::VertexPositionColor::InputElements, DirectX::VertexPositionColor::InputElementCount, shaderByCode, byteCodeLength, m_inputLayout.GetAddressOf());
 
+	m_map.Initialize();
 	m_grid = new Grid();
 	m_grid->Initialize();
-	m_grid->SetWonRowNam(GRIDNAM);
+	m_grid->SetWonRowNam(m_map.GetGridNam());
 
-	m_glound.SetWonRowNam(GRIDNAM);
+	m_glound.SetWonRowNam(m_map.GetGridNam());
 	m_glound.Initialize();
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -101,6 +101,8 @@ void Game::Update(DX::StepTimer const& timer)
 
 	m_DCamera->Update();
 
+	m_map.Update();
+
 	elapsedTime;
 }
 
@@ -129,6 +131,8 @@ void Game::Render()
 
 	m_glound.Render();
 	m_grid->Render();
+
+	m_map.Render();
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     Present();
