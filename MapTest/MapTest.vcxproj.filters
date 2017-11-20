@@ -32,6 +32,9 @@
     <Filter Include="MAP">
       <UniqueIdentifier>{8943de72-0d83-4088-ba5e-9989cd81fbe6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyMas">
+      <UniqueIdentifier>{edc1ed2a-c421-4539-8bea-17645a26f0fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -64,6 +67,9 @@
     <ClInclude Include="MAP\MAP.h">
       <Filter>MAP</Filter>
     </ClInclude>
+    <ClInclude Include="MyMas\MyMas.h">
+      <Filter>MyMas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -95,6 +101,9 @@
     </ClCompile>
     <ClCompile Include="MAP\MAP.cpp">
       <Filter>MAP</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMas\MyMas.cpp">
+      <Filter>MyMas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

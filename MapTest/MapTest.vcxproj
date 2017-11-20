@@ -171,6 +171,7 @@
     <ClInclude Include="Glound\Glound.h" />
     <ClInclude Include="MAP\MAP.h" />
     <ClInclude Include="Mouse\Mouse.h" />
+    <ClInclude Include="MyMas\MyMas.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="StepTimer.h" />
   </ItemGroup>
@@ -186,6 +187,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MAP\MAP.cpp" />
     <ClCompile Include="Mouse\Mouse.cpp" />
+    <ClCompile Include="MyMas\MyMas.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

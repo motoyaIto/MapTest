@@ -5,6 +5,7 @@
 //2017/11/02
 #include "Glound.h"
 
+
 Glound::Glound()
 	: m_glound(nullptr)
 	, m_wonRowNam(20)

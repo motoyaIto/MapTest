@@ -7,6 +7,8 @@
 
 #include <DirectXColors.h>
 
+#include "..//..//..//MyMas//MyMas.h"
+
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
 
@@ -35,7 +37,7 @@ void Grid::Render()
 	for (int i = 0; i < m_wonRowNam + 1; i++)
 	{
 		Vector3 lineStart = Vector3(-m_wonRowNam / 2, 0.1f, i - (m_wonRowNam / 2));
-		Vector3 lineEnd = Vector3(m_wonRowNam / 2, 0.1f, i - (m_wonRowNam / 2));
+		Vector3 lineEnd = Vector3(MyMas::RoundUp((float)m_wonRowNam / 2), 0.1f, i - (m_wonRowNam / 2));
 
 		m_line->SetStartPos(lineStart);
 		m_line->SetEndPos(lineEnd);
@@ -47,7 +49,7 @@ void Grid::Render()
 	for (int i = 0; i < m_wonRowNam + 1; i++)
 	{
 		Vector3 lineStart = Vector3(i - (m_wonRowNam / 2) , 0.1f, -m_wonRowNam / 2);
-		Vector3 lineEnd = Vector3(i - (m_wonRowNam / 2), 0.1f, m_wonRowNam / 2);
+		Vector3 lineEnd = Vector3(i - (m_wonRowNam / 2), 0.1f,MyMas::RoundUp((float)m_wonRowNam / 2));
 
 		m_line->SetStartPos(lineStart);
 		m_line->SetEndPos(lineEnd);

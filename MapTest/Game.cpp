@@ -66,8 +66,8 @@ void Game::Initialize(HWND window, int width, int height)
 
 	m_map.Initialize();
 	m_grid = new Grid();
-	m_grid->Initialize();
 	m_grid->SetWonRowNam(m_map.GetGridNam());
+	m_grid->Initialize();
 
 	m_glound.SetWonRowNam(m_map.GetGridNam());
 	m_glound.Initialize();
