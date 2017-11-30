@@ -83,11 +83,11 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11InputLayout> m_inputLayout;
 	DirectX::BasicEffect* m_effect;
 
-	DebugCamera* m_DCamera;
+	Camera* m_DCamera;
 	Grid* m_grid;
 	Obj3D* m_obj;
 	Glound m_glound;
-	MAP m_map;
+	MAP* m_map;
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	
 };
