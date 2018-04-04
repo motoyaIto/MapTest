@@ -208,6 +208,7 @@
     <MeshContentTask Include="Assets\Ground.FBX" />
     <MeshContentTask Include="Assets\Mount1.FBX" />
     <MeshContentTask Include="Assets\Mount2.FBX" />
+    <MeshContentTask Include="Assets\Player.FBX" />
     <MeshContentTask Include="Assets\PoisonSwamp.FBX" />
     <MeshContentTask Include="Assets\Pond.FBX" />
   </ItemGroup>

@@ -52,9 +52,6 @@
     <ClInclude Include="DirectXResourse\Line\Line.h">
       <Filter>DirectXResourse\Line</Filter>
     </ClInclude>
-    <ClInclude Include="DirectXResourse\Line\Grid\Grid.h">
-      <Filter>DirectXResourse\Line\Grid</Filter>
-    </ClInclude>
     <ClInclude Include="Mouse\Mouse.h">
       <Filter>Mouse</Filter>
     </ClInclude>
@@ -69,6 +66,9 @@
     </ClInclude>
     <ClInclude Include="MyMas\MyMas.h">
       <Filter>MyMas</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXResourse\Line\Grid\Grid.h">
+      <Filter>DirectXResourse\Line\Grid</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +133,9 @@
       <Filter>Assets</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\PoisonSwamp.FBX">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\Player.FBX">
       <Filter>Assets</Filter>
     </MeshContentTask>
   </ItemGroup>

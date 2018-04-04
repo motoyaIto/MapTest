@@ -51,8 +51,8 @@ void Game::Initialize(HWND window, int width, int height)
 	m_DCamera = new DebugCamera(width, height);
 	
 	Obj3D::InitializeStatic(m_DCamera);
-	/*m_obj = new Obj3D();
-	m_obj->LoadModel(L"Resources/Ground.cmo");*/
+	m_obj = new Obj3D();
+	m_obj->LoadModel(L"Resources/Ground.cmo");
 
 	m_effect = new DirectX::BasicEffect(DirectXResourse::m_d3dDevice.Get());
 	m_effect->SetView(m_DCamera->GetView());
@@ -129,12 +129,12 @@ void Game::Render()
 	DirectXResourse::m_d3dContext->IASetInputLayout(m_inputLayout.Get());
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	//m_obj->Render();
+	m_obj->Render();
 
-	m_glound.Render();
-	m_grid->Render();
+	//m_glound.Render();
+	//m_grid->Render();
 
-	m_map->Render();
+	//m_map->Render();
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     Present();
